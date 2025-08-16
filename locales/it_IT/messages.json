@@ -1,0 +1,47 @@
+{
+  "console": {
+    "sending_blank_message": "Invio messaggio vuoto...",
+    "recording": "[Registrazione]",
+    "transcribing": "[Trascrizione]",
+    "mic_indicator": "(mic)",
+    "full_auto_set_to": "Auto Completo Impostato Su ",
+    "semi_auto_chat_set_to": "Chat Semi-Automatica Impostata Su ",
+    "minecraft_chat_loaded": "Chat Minecraft Caricata!",
+    "pressed": "Premuto ",
+    "removed_repeats": "Rimossi duplicati! Messaggio originale era: "
+  },
+  "errors": {
+    "code_issues": "Ops! Il codice ha alcuni problemi, aspetta un secondo.",
+    "transcription_failed": "Trascrizione fallita",
+    "api_error": "Errore API",
+    "file_not_found": "File non trovato",
+    "connection_error": "Errore di connessione",
+    "timeout_error": "Timeout scaduto",
+    "invalid_input": "Input non valido",
+    "permission_denied": "Permesso negato"
+  },
+  "status": {
+    "init": "Inizializzazione",
+    "idle": "Inattivo",
+    "tts_process": "Processo TTS",
+    "rag_process": "Processo RAG",
+    "thinking": "Pensando",
+    "speaking": "Parlando",
+    "baked": "COMPLETATO",
+    "loading": "Caricamento",
+    "processing": "Elaborazione",
+    "ready": "Pronto",
+    "waiting": "In attesa"
+  },
+  "notifications": {
+    "startup_complete": "Avvio completato",
+    "shutdown_initiated": "Spegnimento avviato",
+    "model_loaded": "Modello caricato",
+    "model_unloaded": "Modello scaricato",
+    "settings_saved": "Impostazioni salvate",
+    "settings_loaded": "Impostazioni caricate",
+    "language_changed": "Lingua cambiata a: {language}",
+    "hotkey_enabled": "Scorciatoia abilitata: {hotkey}",
+    "hotkey_disabled": "Scorciatoia disabilitata: {hotkey}"
+  }
+}

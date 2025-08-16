@@ -1,0 +1,21 @@
+{
+  "default_locale": "en_US",
+  "available_locales": {
+    "en_US": {
+      "name": "English (US)",
+      "native_name": "English",
+      "whisper_code": "en"
+    },
+    "it_IT": {
+      "name": "Italian (Italy)",
+      "native_name": "Italiano",
+      "whisper_code": "it"
+    },
+    "ru_RU": {
+      "name": "Russian (Russia)",
+      "native_name": "Русский",
+      "whisper_code": "ru"
+    }
+  },
+  "fallback_locale": "en_US"
+}

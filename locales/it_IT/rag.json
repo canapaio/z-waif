@@ -1,0 +1,37 @@
+{
+  "default_messages": {
+    "no_memory_currently": "Nessuna memoria attualmente!",
+    "summarize_prompt": "Puoi riassumere tutti questi messaggi di chat? Questi sono ricordi precedenti che tu, {char_name}, hai vissuto. Sentiti libero di concentrarti sui dettagli che sono degni di nota o che trovi interessanti.",
+    "memory_retrieved": "Memoria recuperata: {count} elementi",
+    "memory_saved": "Memoria salvata con successo",
+    "memory_cleared": "Memoria cancellata",
+    "rag_processing": "Elaborazione RAG in corso...",
+    "rag_complete": "Elaborazione RAG completata",
+    "rag_failed": "Elaborazione RAG fallita"
+  },
+  "lore_default": "Ecco alcune informazioni sull'argomento attuale dal tuo lorebook;\n\n",
+  "rag_system": {
+    "initializing": "Inizializzazione sistema RAG...",
+    "ready": "Sistema RAG pronto",
+    "processing_query": "Elaborazione query: {query}",
+    "found_matches": "Trovate {count} corrispondenze",
+    "no_matches": "Nessuna corrispondenza trovata",
+    "database_updated": "Database aggiornato con {count} nuovi elementi",
+    "database_cleared": "Database cancellato",
+    "similarity_threshold": "Soglia similarità: {threshold}",
+    "context_window": "Finestra contesto: {size} token",
+    "memory_intro": "Questo messaggio è una memoria di un'interazione che hai avuto, rilevante per quello che sta accadendo attualmente;",
+    "memory_outro": "Questa è la fine della memoria!",
+    "user_label": "Utente",
+    "loading_previous": "Caricamento RAG dalla sessione precedente!",
+    "recalculating": "Ricalcolo manuale del database RAG. Dammi un po' di tempo..."
+  },
+  "debug": {
+    "word_parsed": "Parola analizzata: {word}",
+    "value_calculated": "Valore calcolato: {value}",
+    "message_evaluated": "Messaggio valutato: {score}",
+    "database_size": "Dimensione database: {size} elementi",
+    "processing_time": "Tempo elaborazione: {time}ms",
+    "memory_usage": "Uso memoria: {usage}MB"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "tabs": {
+    "chat": "Chat",
+    "visual": "Visuale",
+    "main": "Principale",
+    "settings": "Impostazioni",
+    "tags_tasks": "Tag e Compiti",
+    "debug": "Debug",
+    "links": "Collegamenti"
+  },
+  "buttons": {
+    "send": "Invia",
+    "mic_toggle": "Microfono (Attiva/Disattiva)",
+    "reroll": "Rigenera",
+    "send_blank": "Invia Vuoto",
+    "undo": "Annulla",
+    "toggle_auto_chat": "Attiva/Disattiva Chat Automatica",
+    "toggle_semi_auto_chat": "Attiva/Disattiva Chat Semi-Automatica",
+    "take_send_image": "Scatta / Invia Immagine",
+    "check_uncheck": "Seleziona/Deseleziona",
+    "chat_soft_reset": "Reset Soft Chat",
+    "proc_random_memory": "Elabora Memoria Casuale",
+    "change_time": "Cambia Orario",
+    "change_model_preset": "Cambia Preset Modello",
+    "update_task": "Aggiorna Compito",
+    "update_tags": "Aggiorna Tag"
+  },
+  "checkboxes": {
+  },
+  "status": {
+    "now_recording": "Registrazione in Corso!",
+    "auto_chat_enabled": "Chat Automatica Attiva",
+    "semi_auto_chat_enabled": "Chat Semi-Automatica Attiva"
+  },
+  "checkboxes": {
+    "use_image_feed": "Usa Feed Immagini (Selezione File)",
+    "direct_talk": "Parla Direttamente e Invia",
+    "post_reply": "Rispondi Dopo / Rispondi Dopo Immagine",
+    "preview_before_sending": "Anteprima Prima dell'Invio",
+    "capture_screenshot": "Cattura Screenshot",
+    "disable_keyboard_shortcuts": "Disabilita Scorciatoie Tastiera (Blocco Toggle Input)",
+    "speak_typed_chats": "Pronuncia Chat Digitate / Chat Ombra",
+    "suppress_rp": "Sopprimi RP (come altri)",
+    "cutoff_newlines": "Taglia alle Nuove Righe (Doppio Invio)",
+    "ban_asterisks": "Vieta Asterischi",
+    "gaming_loop": "Loop Gaming"
+  },
+  "textboxes": {
+    "current_task": "Compito Attuale",
+    "set_new_task": "Imposta Nuovo Compito",
+    "previous_tasks": "Compiti Precedenti",
+    "current_tags": "Tag Attuali",
+    "set_new_tags": "Imposta Nuovi Tag",
+    "previous_tags": "Tag Precedenti",
+    "alarm_time": "Orario Allarme",
+    "model_preset": "Nome Preset Modello",
+    "general_debug": "Debug Generale",
+    "rag_debug": "Debug RAG",
+    "temperature_readout": "Lettura Temperatura Casuale",
+    "links": "Collegamenti"
+  },
+  "sliders": {
+    "auto_chat_sensitivity": "Sensibilità Chat Automatica",
+    "max_chat_tokens": "Token Chat Massimi / Lunghezza Risposta"
+  },
+  "links": {
+    "github_project": "Progetto Github",
+    "documentation": "Documentazione",
+    "youtube": "YouTube",
+    "support_kofi": "Supporta ulteriore sviluppo su Ko-Fi",
+    "email_support": "Scrivimi per sviluppo, installazione e assistenza AI-waifu premium"
+   },
+   "app_title": "Interfaccia Z-Waif"
+ }

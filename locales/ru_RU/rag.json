@@ -1,0 +1,41 @@
+{
+  "rag_system": {
+    "memory_intro": "Это воспоминание о взаимодействии, которое у вас было, относящееся к тому, что происходит сейчас;",
+    "memory_outro": "Это конец воспоминания!",
+    "user_label": "Пользователь",
+    "loading_previous": "Загрузка RAG из предыдущей сессии!",
+    "generating_database": "Генерация базы данных RAG...",
+    "processing_history": "Обработка истории разговоров...",
+    "calculating_scores": "Вычисление оценок релевантности...",
+    "saving_database": "Сохранение базы данных RAG...",
+    "database_ready": "База данных RAG готова к использованию",
+    "no_history_found": "История разговоров не найдена",
+    "memory_updated": "Память обновлена с новым взаимодействием",
+    "retrieving_context": "Извлечение релевантного контекста...",
+    "context_found": "Найден релевантный контекст из {count} сообщений",
+    "no_context_found": "Релевантный контекст не найден",
+    "memory_search_complete": "Поиск в памяти завершен",
+    "building_response_context": "Построение контекста для ответа...",
+    "rag_disabled": "Система RAG отключена",
+    "rag_enabled": "Система RAG активна",
+    "memory_size": "Размер памяти: {size} взаимодействий",
+    "relevance_threshold": "Порог релевантности: {threshold}",
+    "processing_new_message": "Обработка нового сообщения для RAG...",
+    "adding_to_memory": "Добавление в долговременную память...",
+    "memory_cleanup": "Очистка старых воспоминаний...",
+    "optimizing_database": "Оптимизация базы данных..."
+  },
+  "memory_types": {
+    "conversation": "Разговорная память",
+    "factual": "Фактическая память",
+    "emotional": "Эмоциональная память",
+    "contextual": "Контекстуальная память",
+    "procedural": "Процедурная память"
+  },
+  "search_results": {
+    "high_relevance": "Высокая релевантность",
+    "medium_relevance": "Средняя релевантность",
+    "low_relevance": "Низкая релевантность",
+    "no_relevance": "Нет релевантности"
+  }
+}

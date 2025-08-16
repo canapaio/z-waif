@@ -1,0 +1,69 @@
+{
+  "tabs": {
+    "chat": "Chat",
+    "visual": "Visual",
+    "settings": "Settings",
+    "tags_tasks": "Tags & Tasks",
+    "debug": "Debug",
+    "links": "Links"
+  },
+  "buttons": {
+    "send": "Send",
+    "mic_toggle": "Mic (Toggle)",
+    "reroll": "Reroll",
+    "send_blank": "Send Blank",
+    "undo": "Undo",
+    "toggle_autochat": "Toggle Auto-Chat",
+    "toggle_semi_autochat": "Toggle Semi-Auto Chat",
+    "take_send_image": "Take / Send Image",
+    "check_uncheck": "Check/Uncheck",
+    "chat_soft_reset": "Chat Soft Reset",
+    "proc_random_memory": "Proc a Random Memory",
+    "change_time": "Change Time",
+    "change_model_preset": "Change Model Preset",
+    "update_task": "Update Task",
+    "update_tags": "Update Tags"
+  },
+  "checkboxes": {
+    "now_recording": "Now Recording!",
+    "autochat_enabled": "Auto-Chat Enabled",
+    "semi_autochat_enabled": "Semi-Auto Chat Enabled",
+    "use_image_feed": "Use Image Feed (File Select)",
+    "direct_talk_send": "Direct Talk & Send",
+    "reply_after_image": "Post Reply / Reply After Image",
+    "preview_before_sending": "Preview before Sending",
+    "capture_screenshot": "Capture Screenshot",
+    "disable_keyboard_shortcuts": "Disable Keyboard Shortcuts (Input Toggle Lock)",
+    "speak_typed_chats": "Speak Typed Chats / Shadow Chats",
+    "suppress_rp": "Supress RP (as others)",
+    "cutoff_newlines": "Cutoff at Newlines (Double Enter)",
+    "ban_asterisks": "Ban Asterisks",
+    "gaming_loop": "Gaming Loop"
+  },
+  "textboxes": {
+    "current_task": "Current Task",
+    "set_new_task": "Set New Task",
+    "previous_tasks": "Previous Tasks",
+    "current_tags": "Current Tags",
+    "set_new_tags": "Set New Tags",
+    "previous_tags": "Previous Tags",
+    "general_debug": "General Debug",
+    "rag_debug": "RAG Debug",
+    "temperature_readout": "Random Temperature Readout",
+    "links": "Links"
+  },
+  "sliders": {
+    "autochat_sensitivity": "Auto-Chat Sensitivity",
+    "max_chat_tokens": "Max Chat Tokens / Reply Length",
+    "alarm_time": "Alarm Time",
+    "model_preset_name": "Model Preset Name"
+  },
+  "links_block": {
+    "github_project": "Github Project:",
+    "documentation": "Documentation:",
+    "youtube": "YouTube:",
+    "support_kofi": "Support more development on Ko-Fi:",
+    "email_premium": "Email me for premium AI-waifu development, install, and assistance:"
+  },
+  "app_title": "Z-Waif UI"
+}

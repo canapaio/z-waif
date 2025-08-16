@@ -8,6 +8,11 @@ import os
 import time
 import utils.logging
 import utils.settings
+from utils.i18n import get_i18n_manager
+
+# Inizializza il sistema i18n
+i18n = get_i18n_manager()
+_ = i18n.get_text
 
 # Words and their data
 word_database = {
@@ -29,7 +34,7 @@ history_database = [["Start of all history!", "Start of all history!"]]
 show_rag_debug = True
 show_rag_debug_deep = False
 
-current_rag_message = "No memory currently!"
+current_rag_message = _("default_messages.no_memory_currently", "rag")
 
 history_demarc = 20         # This is the point where the history gets considered as usable for RAG
 
@@ -49,8 +54,9 @@ char_name = os.environ.get("CHAR_NAME")
 def setup_based_rag():
 
     if show_rag_debug:
-        utils.logging.update_rag_log("Running BASED RAG")
-        print("Running BASED RAG")
+        rag_running_msg = _("rag_system.initializing", "rag")
+        utils.logging.update_rag_log(rag_running_msg)
+        print(rag_running_msg)
 
     # Create a word-value database(d)
     global word_database
@@ -291,14 +297,18 @@ def run_based_rag(message, her_previous):
 
     global current_rag_message
 
-    current_rag_message = "[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;\n"
-    current_rag_message += "User: " + history_database[best_message_id - 1][0] + "\n"
+    memory_intro = _("rag_system.memory_intro", "rag")
+    memory_outro = _("rag_system.memory_outro", "rag")
+    user_label = _("rag_system.user_label", "rag")
+    
+    current_rag_message = f"[System M]; {memory_intro}\n"
+    current_rag_message += f"{user_label}: " + history_database[best_message_id - 1][0] + "\n"
     current_rag_message += char_name + ": " + history_database[best_message_id - 1][1] + "\n"
-    current_rag_message += "User: " + history_database[best_message_id][0] + "\n"
+    current_rag_message += f"{user_label}: " + history_database[best_message_id][0] + "\n"
     current_rag_message += char_name + ": " + history_database[best_message_id][1] + "\n"
-    current_rag_message += "User: " + history_database[best_message_id + 1][0] + "\n"
+    current_rag_message += f"{user_label}: " + history_database[best_message_id + 1][0] + "\n"
     current_rag_message += char_name + ": " + history_database[best_message_id + 1][1] + "\n"
-    current_rag_message += "[System M]; This is the end of the memory!"
+    current_rag_message += f"[System M]; {memory_outro}"
 
     if show_rag_debug:
         utils.logging.update_rag_log(current_rag_message)
@@ -581,7 +591,8 @@ def load_rag_history():
         # File found, load
 
         if show_rag_debug:
-            utils.logging.update_rag_log("\nLoading RAG from pervious session!\n")
+            loading_msg = _("rag_system.loading_previous", "rag")
+            utils.logging.update_rag_log(f"\n{loading_msg}\n")
 
         with open(path, 'r') as openfile:
             word_database = json.load(openfile)
@@ -606,8 +617,9 @@ def manual_recalculate_database():
 
     # All in one
 
-    print("\nManually re-calculating the RAG database. Give me some time...\n")
-    utils.logging.update_rag_log("\nManually re-calculating the RAG database. Give me some time...\n")
+    recalc_msg = _("rag_system.recalculating", "rag")
+    print(f"\n{recalc_msg}\n")
+    utils.logging.update_rag_log(f"\n{recalc_msg}\n")
     setup_based_rag()
 
 

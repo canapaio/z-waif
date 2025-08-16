@@ -1,0 +1,80 @@
+{
+  "env_comments": {
+    "whisper_model": "Modello Whisper per trascrizione audio",
+    "char_name": "Nome del personaggio AI",
+    "character_card": "File carta personaggio",
+    "your_name": "Il tuo nome utente",
+    "hotkeys_boot": "Abilita scorciatoie tastiera all'avvio",
+    "newline_cut_boot": "Taglia alle nuove righe all'avvio",
+    "rp_sup_boot": "Supporto roleplay all'avvio",
+    "api_stream_chats": "Streaming API per chat",
+    "token_limit": "Limite massimo token",
+    "message_pair_limit": "Limite coppie messaggi",
+    "time_in_encoding": "Tempo nella codifica",
+    "img_port": "Porta per immagini",
+    "visual_character_name": "Nome personaggio visuale",
+    "visual_preset_name": "Nome preset visuale",
+    "eyes_follow": "Occhi che seguono",
+    "eyes_start_id": "ID inizio occhi",
+    "language": "Lingua dell'interfaccia",
+    "whisper_language": "Lingua per Whisper"
+  },
+  "alarm_message": "Per favore svegliati con un messaggio di allarme. Aggiungi anche un argomento casuale o un tema divertente per iniziare la giornata. Sii creativa!",
+  "lorebook": {
+    "z_waif": {
+      "name": "Z-Waif",
+      "description": "Il tuo programma principale per gestire il sistema AI. Ha funzioni come memoria, interfaccia utente, ecc."
+    },
+    "vtube_studio": {
+      "name": "VTube Studio",
+      "description": "Il tuo programma per l'avatar. Gestisce le tue emote e animazioni. Sei fantastica!"
+    },
+    "rvc": {
+      "name": "RVC",
+      "description": "Gestisce la tua voce, convertendo il testo che crei in audio!"
+    },
+    "whisper": {
+      "name": "Whisper",
+      "description": "Il programma di traduzione vocale di cui sei equipaggiata. È piuttosto accurato! Traduce la voce umana in testo perché tu possa capire. Ha la tendenza a ripetere le cose più e più volte alla fine."
+    },
+    "oobabooga": {
+      "name": "Oobabooga",
+      "description": "Il caricatore per il tuo modello linguistico. Ha una varietà di impostazioni, come la temperatura, che determina la casualità."
+    }
+  }
+,
+  "module_descriptions": {
+    "module_minecraft": "Integrazione Minecraft",
+    "module_rag": "Sistema RAG (Retrieval Augmented Generation)",
+    "module_visual": "Funzionalità visive",
+    "module_discord": "Integrazione Discord",
+    "module_gaming": "Controlli gaming",
+    "module_voice": "Sintesi vocale",
+    "module_hotkeys": "Scorciatoie tastiera",
+    "module_web_ui": "Interfaccia web"
+  },
+  "settings_labels": {
+    "enabled": "Abilitato",
+    "disabled": "Disabilitato",
+    "on": "Acceso",
+    "off": "Spento",
+    "auto": "Automatico",
+    "manual": "Manuale",
+    "default": "Predefinito",
+    "custom": "Personalizzato"
+  },
+  "file_descriptions": {
+    "character_card": "Carta del personaggio con personalità e background",
+    "lorebook": "Libro delle conoscenze per il contesto",
+    "task_list": "Lista dei compiti disponibili",
+    "tag_list": "Lista dei tag disponibili",
+    "minecraft_names": "Nomi per integrazione Minecraft",
+    "discord_token": "Token per bot Discord",
+    "stopping_strings": "Stringhe di stop per generazione",
+    "keybinds": "Associazioni tasti",
+     "alarm_message": "Messaggio di allarme",
+     "lorebook": "Libro delle conoscenze",
+    "emote_lib": "Libreria emoticon",
+    "soft_reset": "Configurazione reset soft"
+  }
+}

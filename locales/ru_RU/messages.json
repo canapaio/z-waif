@@ -1,0 +1,43 @@
+{
+  "startup": {
+    "initializing": "Инициализация Z-Waif...",
+    "loading_models": "Загрузка моделей ИИ...",
+    "connecting_services": "Подключение к сервисам...",
+    "ready": "Z-Waif готов к использованию!"
+  },
+  "errors": {
+    "model_load_failed": "Ошибка загрузки модели: {error}",
+    "connection_failed": "Ошибка подключения: {service}",
+    "file_not_found": "Файл не найден: {filename}",
+    "invalid_config": "Неверная конфигурация: {config}",
+    "api_error": "Ошибка API: {message}",
+    "voice_error": "Ошибка голосовой системы: {error}",
+    "vtube_connection_error": "Ошибка подключения к VTube Studio",
+    "discord_error": "Ошибка Discord: {error}",
+    "minecraft_error": "Ошибка Minecraft: {error}"
+  },
+  "success": {
+    "settings_saved": "Настройки успешно сохранены",
+    "settings_loaded": "Настройки успешно загружены",
+    "model_loaded": "Модель {model} успешно загружена",
+    "service_connected": "Подключение к {service} установлено",
+    "file_saved": "Файл {filename} сохранен",
+    "vtube_connected": "Подключение к VTube Studio установлено",
+    "discord_connected": "Подключение к Discord установлено",
+    "minecraft_connected": "Подключение к Minecraft установлено"
+  },
+  "warnings": {
+    "high_temperature": "Высокая температура может привести к непредсказуемым ответам",
+    "low_tokens": "Низкое количество токенов может ограничить длину ответов",
+    "missing_dependency": "Отсутствует зависимость: {dependency}",
+    "deprecated_feature": "Функция {feature} устарела и будет удалена",
+    "performance_warning": "Производительность может быть снижена"
+  },
+  "info": {
+    "processing_request": "Обработка запроса...",
+    "generating_response": "Генерация ответа...",
+    "saving_conversation": "Сохранение разговора...",
+    "updating_memory": "Обновление памяти...",
+    "checking_updates": "Проверка обновлений..."
+  }
+}

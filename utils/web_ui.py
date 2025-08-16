@@ -9,7 +9,11 @@ import utils.settings
 import utils.hotkeys
 import utils.tag_task_controller
 import utils.voice
+import utils.i18n
 import json
+
+# Inizializza sistema i18n
+from utils.i18n import _
 
 # Import the gradio theme color
 with open("Configurables/GradioThemeColor.json", 'r') as openfile:
@@ -24,13 +28,13 @@ based_theme = gr.themes.Base(
 
 
 
-with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
+with gr.Blocks(theme=based_theme, title=_("app_title")) as demo:
 
     #
     # CHAT
     #
 
-    with gr.Tab("Chat"):
+    with gr.Tab(_("tabs.chat")):
 
         #
         # Main Chatbox
@@ -84,7 +88,7 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
             msg.submit(respond, [msg, chatbot], [msg])
 
-            send_button = gr.Button(variant="primary", value="Send")
+            send_button = gr.Button(variant="primary", value=_("buttons.send"))
             send_button.click(respond, inputs=[msg, chatbot], outputs=[msg])
 
         demo.load(update_chat, every=0.05, outputs=[chatbot])
@@ -102,10 +106,10 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
         with gradio.Row():
 
-            recording_button = gr.Button(value="Mic (Toggle)")
+            recording_button = gr.Button(value=_("buttons.mic_toggle"))
             recording_button.click(fn=recording_button_click)
 
-            recording_checkbox_view = gr.Checkbox(label="Now Recording!")
+            recording_checkbox_view = gr.Checkbox(label=_("status.now_recording"))
 
 
 
@@ -132,9 +136,9 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
                 main.main_undo()
                 return
 
-            button_regen = gr.Button(value="Reroll")
-            button_blank = gr.Button(value="Send Blank")
-            button_undo = gr.Button(value="Undo")
+            button_regen = gr.Button(value=_("buttons.reroll"))
+            button_blank = gr.Button(value=_("buttons.send_blank"))
+            button_undo = gr.Button(value=_("buttons.undo"))
 
             button_regen.click(fn=regenerate)
             button_blank.click(fn=send_blank)
@@ -160,12 +164,12 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
         with gradio.Row():
 
-            autochat_button = gr.Button(value="Toggle Auto-Chat")
+            autochat_button = gr.Button(value=_("buttons.toggle_auto_chat"))
             autochat_button.click(fn=autochat_button_click)
 
-            autochat_checkbox_view = gr.Checkbox(label="Auto-Chat Enabled")
+            autochat_checkbox_view = gr.Checkbox(label=_("status.auto_chat_enabled"))
 
-            autochat_sensitivity_slider = gr.Slider(minimum=4, maximum=144, value=20, label="Auto-Chat Sensitivity")
+            autochat_sensitivity_slider = gr.Slider(minimum=4, maximum=144, value=20, label=_("sliders.auto_chat_sensitivity"))
             autochat_sensitivity_slider.change(fn=change_autochat_sensitivity, inputs=autochat_sensitivity_slider)
 
 
@@ -185,10 +189,10 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
         with gradio.Row():
-            semi_auto_chat_button = gr.Button(value="Toggle Semi-Auto Chat")
+            semi_auto_chat_button = gr.Button(value=_("buttons.toggle_semi_auto_chat"))
             semi_auto_chat_button.click(fn=semi_auto_chat_button_click)
 
-            semi_auto_chat_checkbox_view = gr.Checkbox(label="Semi-Auto Chat Enabled")
+            semi_auto_chat_checkbox_view = gr.Checkbox(label=_("status.semi_auto_chat_enabled"))
 
 
         def update_settings_view():
@@ -206,7 +210,7 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
     #
 
     if utils.settings.vision_enabled:
-        with gr.Tab("Visual"):
+        with gr.Tab(_("tabs.visual")):
 
             #
             # Take / Retake Image
@@ -218,7 +222,7 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
                     return
 
-                take_image_button = gr.Button(value="Take / Send Image")
+                take_image_button = gr.Button(value=_("buttons.take_send_image"))
                 take_image_button.click(fn=take_image_button_click)
 
 
@@ -234,10 +238,10 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
                 with gr.Row():
-                    cam_use_image_feed_button = gr.Button(value="Check/Uncheck")
+                    cam_use_image_feed_button = gr.Button(value=_("buttons.check_uncheck"))
                     cam_use_image_feed_button.click(fn=cam_use_image_feed_button_click)
 
-                    cam_use_image_feed_checkbox_view = gr.Checkbox(label="Use Image Feed (File Select)")
+                    cam_use_image_feed_checkbox_view = gr.Checkbox(label=_("checkboxes.use_image_feed"))
 
 
             #
@@ -252,10 +256,10 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
                 with gr.Row():
-                    cam_direct_talk_button = gr.Button(value="Check/Uncheck")
+                    cam_direct_talk_button = gr.Button(value=_("buttons.check_uncheck"))
                     cam_direct_talk_button.click(fn=cam_direct_talk_button_click)
 
-                    cam_direct_talk_checkbox_view = gr.Checkbox(label="Direct Talk & Send")
+                    cam_direct_talk_checkbox_view = gr.Checkbox(label=_("checkboxes.direct_talk"))
 
 
             #
@@ -270,10 +274,10 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
                 with gr.Row():
-                    cam_reply_after_button = gr.Button(value="Check/Uncheck")
+                    cam_reply_after_button = gr.Button(value=_("buttons.check_uncheck"))
                     cam_reply_after_button.click(fn=cam_reply_after_button_click)
 
-                    cam_reply_after_checkbox_view = gr.Checkbox(label="Post Reply / Reply After Image")
+                    cam_reply_after_checkbox_view = gr.Checkbox(label=_("checkboxes.post_reply"))
 
 
 
@@ -289,10 +293,10 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
                 with gr.Row():
-                    cam_image_preview_button = gr.Button(value="Check/Uncheck")
+                    cam_image_preview_button = gr.Button(value=_("buttons.check_uncheck"))
                     cam_image_preview_button.click(fn=cam_image_preview_button_click)
 
-                    cam_image_preview_checkbox_view = gr.Checkbox(label="Preview before Sending")
+                    cam_image_preview_checkbox_view = gr.Checkbox(label=_("checkboxes.preview_before_sending"))
 
             #
             # Capture screenshot
@@ -306,10 +310,10 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
                 with gr.Row():
-                    cam_capture_screenshot_button = gr.Button(value="Check/Uncheck")
+                    cam_capture_screenshot_button = gr.Button(value=_("buttons.check_uncheck"))
                     cam_capture_screenshot_button.click(fn=cam_capture_screenshot_button_click)
 
-                    cam_capture_screenshot_checkbox_view = gr.Checkbox(label="Capture Screenshot")
+                    cam_capture_screenshot_checkbox_view = gr.Checkbox(label=_("checkboxes.capture_screenshot"))
 
             def update_visual_view():
                 return utils.settings.cam_use_image_feed, utils.settings.cam_direct_talk, utils.settings.cam_reply_after, utils.settings.cam_image_preview, utils.settings.cam_use_screenshot
@@ -325,7 +329,7 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
     #
 
 
-    with gr.Tab("Settings"):
+    with gr.Tab(_("tabs.settings")):
 
         #
         # Hotkeys
@@ -338,10 +342,10 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
         with gr.Row():
-            hotkey_button = gr.Button(value="Check/Uncheck")
+            hotkey_button = gr.Button(value=_("buttons.check_uncheck"))
             hotkey_button.click(fn=hotkey_button_click)
 
-            hotkey_checkbox_view = gr.Checkbox(label="Disable Keyboard Shortcuts (Input Toggle Lock)")
+            hotkey_checkbox_view = gr.Checkbox(label=_("checkboxes.disable_keyboard_shortcuts"))
 
 
         #
@@ -356,10 +360,10 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
             with gr.Row():
-                shadowchats_button = gr.Button(value="Check/Uncheck")
+                shadowchats_button = gr.Button(value=_("buttons.check_uncheck"))
                 shadowchats_button.click(fn=shadowchats_button_click)
 
-                shadowchats_checkbox_view = gr.Checkbox(label="Speak Typed Chats / Shadow Chats")
+                shadowchats_checkbox_view = gr.Checkbox(label=_("checkboxes.speak_typed_chats"))
 
 
         #
@@ -372,7 +376,7 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
                 return
 
-            soft_reset_button = gr.Button(value="Chat Soft Reset")
+            soft_reset_button = gr.Button(value=_("buttons.chat_soft_reset"))
             soft_reset_button.click(fn=soft_reset_button_click)
 
 
@@ -386,7 +390,7 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
                 return
 
-            soft_reset_button = gr.Button(value="Proc a Random Memory")
+            soft_reset_button = gr.Button(value=_("buttons.proc_random_memory"))
             soft_reset_button.click(fn=random_memory_button_click)
 
 
@@ -402,10 +406,10 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
             with gr.Row():
-                supress_rp_button = gr.Button(value="Check/Uncheck")
+                supress_rp_button = gr.Button(value=_("buttons.check_uncheck"))
                 supress_rp_button.click(fn=supress_rp_button_click)
 
-                supress_rp_checkbox_view = gr.Checkbox(label="Supress RP (as others)")
+                supress_rp_checkbox_view = gr.Checkbox(label=_("checkboxes.suppress_rp"))
 
 
         #
@@ -420,10 +424,10 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
             with gr.Row():
-                newline_cut_button = gr.Button(value="Check/Uncheck")
+                newline_cut_button = gr.Button(value=_("buttons.check_uncheck"))
                 newline_cut_button.click(fn=newline_cut_button_click)
 
-                newline_cut_checkbox_view = gr.Checkbox(label="Cutoff at Newlines (Double Enter)")
+                newline_cut_checkbox_view = gr.Checkbox(label=_("checkboxes.cutoff_newlines"))
 
 
         #
@@ -438,10 +442,10 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
             with gr.Row():
-                asterisk_ban_button = gr.Button(value="Check/Uncheck")
+                asterisk_ban_button = gr.Button(value=_("buttons.check_uncheck"))
                 asterisk_ban_button.click(fn=asterisk_ban_button_click)
 
-                asterisk_ban_checkbox_view = gr.Checkbox(label="Ban Asterisks")
+                asterisk_ban_checkbox_view = gr.Checkbox(label=_("checkboxes.ban_asterisks"))
 
 
         #
@@ -456,7 +460,7 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
                 return
 
 
-            token_slider = gr.Slider(minimum=20, maximum=2048, value=utils.settings.max_tokens, label="Max Chat Tokens / Reply Length")
+            token_slider = gr.Slider(minimum=20, maximum=2048, value=utils.settings.max_tokens, label=_("sliders.max_chat_tokens"))
             token_slider.change(fn=change_max_tokens, inputs=token_slider)
 
 
@@ -475,9 +479,9 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
         with gr.Row():
-            alarm_textbox = gr.Textbox(value=utils.settings.alarm_time, label="Alarm Time")
+            alarm_textbox = gr.Textbox(value=utils.settings.alarm_time, label=_("textboxes.alarm_time"))
 
-            alarm_button = gr.Button(value="Change Time")
+            alarm_button = gr.Button(value=_("buttons.change_time"))
             alarm_button.click(fn=alarm_button_click, inputs=alarm_textbox)
 
 
@@ -495,9 +499,9 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
         with gr.Row():
-            model_preset_textbox = gr.Textbox(value=utils.settings.model_preset, label="Model Preset Name")
+            model_preset_textbox = gr.Textbox(value=utils.settings.model_preset, label=_("textboxes.model_preset"))
 
-            model_preset_button = gr.Button(value="Change Model Preset")
+            model_preset_button = gr.Button(value=_("buttons.change_model_preset"))
             model_preset_button.click(fn=model_preset_button_click, inputs=model_preset_textbox)
 
 
@@ -517,12 +521,12 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
     # Tags / Tasks
     #
 
-    with gr.Tab("Tags & Tasks"):
+    with gr.Tab(_("tabs.tags_tasks")):
 
         #
         # Tasks
 
-        cur_task_box = gr.Textbox(label="Current Task")
+        cur_task_box = gr.Textbox(label=_("textboxes.current_task"))
 
         def update_task_button_click(input_text):
 
@@ -535,11 +539,11 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
         with gr.Row():
-            cur_task_update_box = gr.Textbox(label="Set New Task")
-            cur_task_update_button = gr.Button(value="Update Task")
+            cur_task_update_box = gr.Textbox(label=_("textboxes.set_new_task"))
+            cur_task_update_button = gr.Button(value=_("buttons.update_task"))
             cur_task_update_button.click(fn=update_task_button_click, inputs=cur_task_update_box)
 
-        previous_tasks_box = gr.Textbox(label="Previous Tasks", lines=7)
+        previous_tasks_box = gr.Textbox(label=_("textboxes.previous_tasks"), lines=7)
 
 
         #
@@ -551,16 +555,16 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
         if utils.settings.gaming_enabled:
 
             with gr.Row():
-                gaming_loop_button = gr.Button(value="Check/Uncheck")
+                gaming_loop_button = gr.Button(value=_("buttons.check_uncheck"))
                 gaming_loop_button.click(fn=update_gaming_loop)
 
-                gaming_loop_checkbox_view = gr.Checkbox(label="Gaming Loop")
+                gaming_loop_checkbox_view = gr.Checkbox(label=_("checkboxes.gaming_loop"))
 
 
         #
         # Tags
 
-        cur_tags_box = gr.Textbox(label="Current Tags")
+        cur_tags_box = gr.Textbox(label=_("textboxes.current_tags"))
 
         def update_tags_button_click(new_tags):
             new_tags = new_tags.replace(" ", "")
@@ -571,11 +575,11 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
         with gr.Row():
-            cur_tags_update_box = gr.Textbox(label="Set New Tags")
-            cur_tags_update_button = gr.Button(value="Update Tags")
+            cur_tags_update_box = gr.Textbox(label=_("textboxes.set_new_tags"))
+            cur_tags_update_button = gr.Button(value=_("buttons.update_tags"))
             cur_tags_update_button.click(fn=update_tags_button_click, inputs=cur_tags_update_box)
 
-        previous_tags_box = gr.Textbox(label="Previous Tags", lines=7)
+        previous_tags_box = gr.Textbox(label=_("textboxes.previous_tags"), lines=7)
 
         def update_tag_task_view():
             cantonese_task_list = ""
@@ -609,10 +613,10 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
     # DEBUG
     #
 
-    with gr.Tab("Debug"):
-        debug_log = gr.Textbox(utils.logging.debug_log, lines=10, label="General Debug", autoscroll=True)
-        rag_log = gr.Textbox(utils.logging.rag_log, lines=10, label="RAG Debug", autoscroll=True)
-        kelvin_log = gr.Textbox(utils.logging.kelvin_log, lines=1, label="Random Temperature Readout")
+    with gr.Tab(_("tabs.debug")):
+        debug_log = gr.Textbox(utils.logging.debug_log, lines=10, label=_("textboxes.general_debug"), autoscroll=True)
+        rag_log = gr.Textbox(utils.logging.rag_log, lines=10, label=_("textboxes.rag_debug"), autoscroll=True)
+        kelvin_log = gr.Textbox(utils.logging.kelvin_log, lines=1, label=_("textboxes.temperature_readout"))
 
         def update_logs():
             return utils.logging.debug_log, utils.logging.rag_log, utils.logging.kelvin_log
@@ -625,25 +629,25 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
     # LINKS
     #
 
-    with gr.Tab("Links"):
+    with gr.Tab(_("tabs.links")):
 
         links_text = (
-                      "Github Project:\n" +
+                      _("links.github_project") + ":\n" +
                       "https://github.com/SugarcaneDefender/z-waif \n" +
                       "\n" +
-                      "Documentation:\n" +
+                      _("links.documentation") + ":\n" +
                       "https://docs.google.com/document/d/1qzY09kcwfbZTaoJoQZDAWv282z88jeUCadivLnKDXCo/edit?usp=sharing \n" +
                       "\n" +
-                      "YouTube:\n" +
+                      _("links.youtube") + ":\n" +
                       "https://www.youtube.com/@SugarcaneDefender \n" +
                       "\n" +
-                      "Support more development on Ko-Fi:\n" +
+                      _("links.support_kofi") + ":\n" +
                       "https://ko-fi.com/zwaif \n" +
                       "\n" +
-                      "Email me for premium AI-waifu development, install, and assistance:\n" +
+                      _("links.email_support") + ":\n" +
                       "zwaif77@gmail.com")
 
-        rag_log = gr.Textbox(links_text, lines=14, label="Links")
+        rag_log = gr.Textbox(links_text, lines=14, label=_("textboxes.links"))
 
 
 

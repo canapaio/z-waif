@@ -72,8 +72,7 @@
     "discord_token": "Token per bot Discord",
     "stopping_strings": "Stringhe di stop per generazione",
     "keybinds": "Associazioni tasti",
-     "alarm_message": "Messaggio di allarme",
-     "lorebook": "Libro delle conoscenze",
+    "alarm_message": "Messaggio di allarme",
     "emote_lib": "Libreria emoticon",
     "soft_reset": "Configurazione reset soft"
   }

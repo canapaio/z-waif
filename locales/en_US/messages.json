@@ -1,0 +1,47 @@
+{
+  "console": {
+    "sending_blank_message": "Sending blank message...",
+    "recording": "[Recording]",
+    "transcribing": "[Transcribing]",
+    "mic_indicator": "(mic)",
+    "full_auto_set_to": "Full Auto Set To ",
+    "semi_auto_chat_set_to": "Semi-Auto Chat Set To ",
+    "minecraft_chat_loaded": "Minecraft Chat Loaded!",
+    "pressed": "Pressed ",
+    "removed_repeats": "Removed duplicates! Original message was: "
+  },
+  "errors": {
+    "code_issues": "Oops! The code has some issues, wait a second.",
+    "transcription_failed": "Transcription failed",
+    "api_error": "API error",
+    "file_not_found": "File not found",
+    "connection_error": "Connection error",
+    "timeout_error": "Timeout expired",
+    "invalid_input": "Invalid input",
+    "permission_denied": "Permission denied"
+  },
+  "status": {
+    "init": "Initialization",
+    "idle": "Idle",
+    "tts_process": "TTS Process",
+    "rag_process": "RAG Process",
+    "thinking": "Thinking",
+    "speaking": "Speaking",
+    "baked": "COMPLETED",
+    "loading": "Loading",
+    "processing": "Processing",
+    "ready": "Ready",
+    "waiting": "Waiting"
+  },
+  "notifications": {
+    "startup_complete": "Startup complete",
+    "shutdown_initiated": "Shutdown initiated",
+    "model_loaded": "Model loaded",
+    "model_unloaded": "Model unloaded",
+    "settings_saved": "Settings saved",
+    "settings_loaded": "Settings loaded",
+    "language_changed": "Language changed to: {language}",
+    "hotkey_enabled": "Hotkey enabled: {hotkey}",
+    "hotkey_disabled": "Hotkey disabled: {hotkey}"
+  }
+}

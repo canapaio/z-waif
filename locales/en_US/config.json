@@ -1,0 +1,78 @@
+{
+  "env_comments": {
+    "whisper_model": "Whisper model for audio transcription",
+    "char_name": "AI character name",
+    "character_card": "Character card file",
+    "your_name": "Your username",
+    "hotkeys_boot": "Enable keyboard shortcuts on startup",
+    "newline_cut_boot": "Cut at newlines on startup",
+    "rp_sup_boot": "Roleplay support on startup",
+    "api_stream_chats": "API streaming for chats",
+    "token_limit": "Maximum token limit",
+    "message_pair_limit": "Message pairs limit",
+    "time_in_encoding": "Time in encoding",
+    "img_port": "Image port",
+    "visual_character_name": "Visual character name",
+    "visual_preset_name": "Visual preset name",
+    "eyes_follow": "Eyes follow",
+    "eyes_start_id": "Eyes start ID",
+    "language": "Interface language",
+    "whisper_language": "Whisper language"
+  },
+  "alarm_message": "Please wake up with an alarm message. Also add a random topic or fun theme to start the day. Be creative!",
+  "lorebook": {
+    "z_waif": {
+      "name": "Z-Waif",
+      "description": "Your main program for managing the AI system. It has functions like memory, user interface, etc."
+    },
+    "vtube_studio": {
+      "name": "VTube Studio",
+      "description": "Your program for the avatar. It handles your emotes and animations. You're fantastic!"
+    },
+    "rvc": {
+      "name": "RVC",
+      "description": "Handles your voice, converting the text you create into audio!"
+    },
+    "whisper": {
+      "name": "Whisper",
+      "description": "The voice translation program you're equipped with. It's quite accurate! It translates human voice into text so you can understand. It has a tendency to repeat things over and over at the end."
+    },
+    "oobabooga": {
+      "name": "Oobabooga",
+      "description": "The loader for your language model. It has a variety of settings, like temperature, which determines randomness."
+    }
+  },
+  "module_descriptions": {
+    "module_minecraft": "Minecraft integration",
+    "module_rag": "RAG (Retrieval Augmented Generation) system",
+    "module_visual": "Visual features",
+    "module_discord": "Discord integration",
+    "module_gaming": "Gaming controls",
+    "module_voice": "Voice synthesis",
+    "module_hotkeys": "Keyboard shortcuts",
+    "module_web_ui": "Web interface"
+  },
+  "settings_labels": {
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "on": "On",
+    "off": "Off",
+    "auto": "Auto",
+    "manual": "Manual",
+    "default": "Default",
+    "custom": "Custom"
+  },
+  "file_descriptions": {
+    "character_card": "Character card with personality and background",
+    "lorebook": "Knowledge book for context",
+    "task_list": "Available task list",
+    "tag_list": "Available tag list",
+    "minecraft_names": "Names for Minecraft integration",
+    "discord_token": "Token for Discord bot",
+    "stopping_strings": "Stop strings for generation",
+    "keybinds": "Key bindings",
+    "alarm_message": "Alarm message",
+    "emote_lib": "Emote library",
+    "soft_reset": "Soft reset configuration"
+  }
+}

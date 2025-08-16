@@ -1,0 +1,37 @@
+{
+  "default_messages": {
+    "no_memory_currently": "No memory currently!",
+    "summarize_prompt": "Can you summarize all these chat messages? These are previous memories that you, {char_name}, have experienced. Feel free to focus on details that are noteworthy or that you find interesting.",
+    "memory_retrieved": "Memory retrieved: {count} items",
+    "memory_saved": "Memory saved successfully",
+    "memory_cleared": "Memory cleared",
+    "rag_processing": "RAG processing in progress...",
+    "rag_complete": "RAG processing completed",
+    "rag_failed": "RAG processing failed"
+  },
+  "lore_default": "Here is some information about the current topic from your lorebook;\n\n",
+  "rag_system": {
+    "initializing": "Initializing RAG system...",
+    "ready": "RAG system ready",
+    "processing_query": "Processing query: {query}",
+    "found_matches": "Found {count} matches",
+    "no_matches": "No matches found",
+    "database_updated": "Database updated with {count} new items",
+    "database_cleared": "Database cleared",
+    "similarity_threshold": "Similarity threshold: {threshold}",
+    "context_window": "Context window: {size} tokens",
+    "memory_intro": "This message is a memory of an interaction you had, relevant to what is currently happening;",
+    "memory_outro": "This is the end of the memory!",
+    "user_label": "User",
+    "loading_previous": "Loading RAG from previous session!",
+    "recalculating": "Manual recalculation of RAG database. Give me some time..."
+  },
+  "debug": {
+    "word_parsed": "Word parsed: {word}",
+    "value_calculated": "Value calculated: {value}",
+    "message_evaluated": "Message evaluated: {score}",
+    "database_size": "Database size: {size} items",
+    "processing_time": "Processing time: {time}ms",
+    "memory_usage": "Memory usage: {usage}MB"
+  }
+}

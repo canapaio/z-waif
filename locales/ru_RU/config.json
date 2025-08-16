@@ -26,5 +26,18 @@
   "system_prompt": "Системный промпт",
   "system_prompt_description": "Базовые инструкции для поведения ИИ",
   "language": "Язык интерфейса",
-  "language_description": "Выберите язык для интерфейса приложения"
+  "language_description": "Выберите язык для интерфейса приложения",
+  "file_descriptions": {
+    "character_card": "Карточка персонажа с личностью и предысторией",
+    "lorebook": "Книга знаний для контекста",
+    "task_list": "Список доступных задач",
+    "tag_list": "Список доступных тегов",
+    "minecraft_names": "Имена для интеграции с Minecraft",
+    "discord_token": "Токен для Discord бота",
+    "stopping_strings": "Строки остановки для генерации",
+    "keybinds": "Привязки клавиш",
+    "alarm_message": "Сообщение будильника",
+    "emote_lib": "Библиотека эмоций",
+    "soft_reset": "Конфигурация мягкого сброса"
+  }
 }

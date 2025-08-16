@@ -4,7 +4,7 @@ import gradio
 import gradio as gr
 import main
 import API.Oogabooga_Api_Support
-import utils.logging
+import utils.custom_logging
 import utils.settings
 import utils.hotkeys
 import utils.tag_task_controller
@@ -614,12 +614,12 @@ with gr.Blocks(theme=based_theme, title=_("app_title")) as demo:
     #
 
     with gr.Tab(_("tabs.debug")):
-        debug_log = gr.Textbox(utils.logging.debug_log, lines=10, label=_("textboxes.general_debug"), autoscroll=True)
-        rag_log = gr.Textbox(utils.logging.rag_log, lines=10, label=_("textboxes.rag_debug"), autoscroll=True)
-        kelvin_log = gr.Textbox(utils.logging.kelvin_log, lines=1, label=_("textboxes.temperature_readout"))
+        debug_log = gr.Textbox(utils.custom_logging.debug_log, lines=10, label=_("textboxes.general_debug"), autoscroll=True)
+        rag_log = gr.Textbox(utils.custom_logging.rag_log, lines=10, label=_("textboxes.rag_debug"), autoscroll=True)
+        kelvin_log = gr.Textbox(utils.custom_logging.kelvin_log, lines=1, label=_("textboxes.temperature_readout"))
 
         def update_logs():
-            return utils.logging.debug_log, utils.logging.rag_log, utils.logging.kelvin_log
+            return utils.custom_logging.debug_log, utils.custom_logging.rag_log, utils.custom_logging.kelvin_log
 
         demo.load(update_logs, every=0.05, outputs=[debug_log, rag_log, kelvin_log])
 

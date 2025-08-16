@@ -8,7 +8,7 @@ import utils.alarm
 import utils.volume_listener
 import utils.settings
 import json
-import utils.logging
+import utils.custom_logging
 import utils.audio
 
 
@@ -110,7 +110,7 @@ def bind_hotkey(binding, input_action):
         keyboard.on_press_key(binding, lambda _: input_action())
     except:
         print("Issue binding to hotkey " + binding + "!")
-        utils.logging.update_debug_log("Issue binding to hotkey " + binding + "!")
+        utils.custom_logging.update_debug_log("Issue binding to hotkey " + binding + "!")
 
 
 def rate_input(rating):
